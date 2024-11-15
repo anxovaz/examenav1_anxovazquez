@@ -154,7 +154,7 @@ Exemplo:
 ```shell
 dns:
       - 172.23.0.3
-``
+```
 ## 9. Engade unha zoa tendaelectronica.int no teu docker DNS que teña:
 - www á IP 172.16.0.1
 - owncloud sexa un CNAME de www
