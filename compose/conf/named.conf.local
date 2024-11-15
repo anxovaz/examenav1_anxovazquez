@@ -1,0 +1,8 @@
+
+zone "tendaelectronica.int" {
+	type master;
+	file "/var/lib/bind/db.tendaelectronica.int";
+	allow-query {
+		any;
+		};
+	};

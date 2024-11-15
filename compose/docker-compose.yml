@@ -1,0 +1,29 @@
+services:
+  equiposervidor1:
+    container_name: equiposervidor1
+    image: ubuntu/bind9
+    platform: linux/amd64
+    ports:
+      - 120:120
+    networks:
+      redeexamen:
+        ipv4_address: 172.23.0.3
+    volumes:
+      - ./conf:/etc/bind
+      - ./zonas:/var/lib/bind
+
+  equipo2:
+    container_name: equipo2
+    image: ubuntu
+    platform: linux/amd64
+    tty: true
+    stdin_open: true
+    dns:
+      - 172.23.0.3
+    networks:
+      redeexamen:
+        ipv4_address: 172.23.0.4
+networks:
+  redeexamen:
+    external: true
+
